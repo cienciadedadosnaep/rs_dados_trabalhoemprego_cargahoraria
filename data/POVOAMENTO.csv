@@ -1,0 +1,5 @@
+"TEMA";"SUBTEMA";"PERGUNTA";"NOME_ARQUIVO_JS"
+"Trabalho e Emprego";"Carga Horária";"Qual a média de horas trabalhadas semanalmente de todas as pessoas de 14 anos ou mais de idade em Salvador?";"cargahoraria_total.csv"
+"Trabalho e Emprego";"Carga Horária";"Qual a média de horas trabalhadas semanalmente de pessoas de 14 anos ou mais de idade organizado por raça/cor em Salvador?";"cargahoraria_raçacor.csv"
+"Trabalho e Emprego";"Carga Horária";"Qual a média de horas trabalhadas semanalmente de pessoas de 14 anos ou mais de idade organizado por sexo biológico em Salvador?";"cargahoraria_sexo.csv"
+"Trabalho e Emprego";"Carga Horária";"Qual a média de horas trabalhadas semanalmente de pessoas de 14 anos ou mais organizado por idade em Salvador?";"cargahoraria_idade.csv"
