@@ -45,7 +45,7 @@ library(jsonlite)
 # #dbClearResult(rs)
 
 library(readr)
-dados <- read_csv("data/recossa_cargahoraria_rc.csv")
+dados <- read_csv("data/recossa_cargahoraria_i.csv")
 dados2 <- data.frame(dados)
 names(dados)
 #dados = recossa_rendimento
@@ -143,9 +143,9 @@ dados <- data_serie
 exportJson0 <- toJSON(teste3)
 
 
-titulo<-T_ST_P_No_TRABALHOEMPREGO$TITULO[2]
+titulo<-T_ST_P_No_TRABALHOEMPREGO$TITULO[4]
 subtexto<-"SIDRA IBGE"
-link <- T_ST_P_No_TRABALHOEMPREGO$LINK[2]
+link <- T_ST_P_No_TRABALHOEMPREGO$LINK[4]
 
 
 texto <- paste('{"title":{"text":"',titulo,
@@ -154,17 +154,25 @@ texto <- paste('{"title":{"text":"',titulo,
                '"},"legend":{"show":true,"top":"bottom"},"tooltip":{},"dataset":{"source":[',data_serie,
                ']},"xAxis":[{"type":"category","gridIndex":0}],',
                '"yAxis":[{"gridIndex":0}],',
-               '"series":[{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[4],
+               '"series":[{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[1],
+               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[1],
+               '","borderWidth":2}},',
+               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[2],
+               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[2],
+               '","borderWidth":2}}',
+               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[3],
+               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
+               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[3],
+               '","borderWidth":2}}',
+               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[4],
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
                '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[4],
-               '","borderWidth":2}},',
+               '","borderWidth":2}}',
                '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[5],
                '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
                '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[5],
-               '","borderWidth":2}}',
-               '{"type":"line",','"seriesLayoutBy":"row","color":"',corsec_recossa_azul[7],
-               '","showBackground":true,"backgroundStyle":{"color":"rgba(180, 180, 180, 0)}"},',
-               '"itemStyle":{"borderRadius":10,"borderColor":"',corsec_recossa_azul[7],
                '","borderWidth":2}}',
                ']','}',sep="")
 
@@ -182,9 +190,9 @@ texto <- paste('{"title":{"text":"',titulo,
 texto<-noquote(texto)
 
 
-write(exportJson0,file = paste('data/',gsub('.csv','',T_ST_P_No_TRABALHOEMPREGO$NOME_ARQUIVO_JS[2]),
+write(exportJson0,file = paste('data/',gsub('.csv','',T_ST_P_No_TRABALHOEMPREGO$NOME_ARQUIVO_JS[4]),
                                '.json',sep =''))
-write(texto,file = paste('data/',T_ST_P_No_TRABALHOEMPREGO$NOME_ARQUIVO_JS[2],
+write(texto,file = paste('data/',T_ST_P_No_TRABALHOEMPREGO$NOME_ARQUIVO_JS[4],
                          sep =''))
 
 #}
@@ -199,3 +207,4 @@ objeto_autm <- SAIDA_POVOAMENTO %>% list()
 exportJson_aut <- toJSON(objeto_autm)
 
 #write(exportJson_aut,file = paste('data/povoamento.json'))
+
