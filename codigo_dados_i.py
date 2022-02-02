@@ -22,11 +22,11 @@ graf3 = grafico3[['V']].reset_index(drop=True)
 graf4 = grafico3[['V']].reset_index(drop=True)
 graf5 = grafico3[['V']].reset_index(drop=True)
 
-graf1.rename(columns={'D3N': 'trimestre', 'V': '14 a 17 anos'}, inplace=True)
-graf2.rename(columns={'V': '18 a 24 anos'}, inplace=True)
-graf3.rename(columns={'V': '25 a 39 anos'}, inplace=True)
-graf4.rename(columns={'V': '40 a 59 anos'}, inplace=True)
-graf5.rename(columns={'V': '60 anos ou mais'}, inplace=True)
+graf1.rename(columns={'D3N': 'trimestre', 'V': '14-17'}, inplace=True)
+graf2.rename(columns={'V': '18-24'}, inplace=True)
+graf3.rename(columns={'V': '25-39'}, inplace=True)
+graf4.rename(columns={'V': '40-59'}, inplace=True)
+graf5.rename(columns={'V': '60+'}, inplace=True)
 graf1['trimestre'] = graf1['trimestre'].replace(['1º trimestre 2012','2º trimestre 2012','3º trimestre 2012','4º trimestre 2012','1º trimestre 2013','2º trimestre 2013','3º trimestre 2013',\
     '4º trimestre 2013','1º trimestre 2014','2º trimestre 2014','3º trimestre 2014','4º trimestre 2014','1º trimestre 2015','2º trimestre 2015','3º trimestre 2015','4º trimestre 2015',\
         '1º trimestre 2016','2º trimestre 2016','3º trimestre 2016','4º trimestre 2016','1º trimestre 2017','2º trimestre 2017','3º trimestre 2017','4º trimestre 2017','1º trimestre 2018',\
