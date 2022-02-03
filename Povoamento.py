@@ -52,7 +52,7 @@ driver.get('http://reconhecendosalvador.ufba.br/admin/#/collections/perguntas/ne
 
 time.sleep(50)
 
-for i in range(0,len(df),3):
+for i in range(0,len(df)):
 
     code = list(pd.read_csv('E:/Área de trabalho/Códigos/R/rs_dados_trabalhoemprego_cargahoraria/data/'+codigol1[i],sep=';', encoding= 'latin-1'))
 
