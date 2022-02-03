@@ -92,7 +92,7 @@ corsec_recossa_azul <- c('#175676','#62acd1','#8bc6d2','#20cfef',
   
   
   data_serie <- paste('[',gsub(' ',',',
-                               paste(paste(as.vector(objeto_0[[1]]$valor)),
+                               paste(paste(as.vector(objeto_0[[1]]$total)),
                                      collapse = ' ')),']',sep = '')
   
   texto<-paste('{"title":{"text":"',titulo,
